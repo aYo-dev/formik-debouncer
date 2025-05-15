@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "lib": ["ESNext", "DOM"], // Specify library files to be included in the compilation
+    "target": "ESNext", // Specify ECMAScript target version
+    "module": "ESNext", // Specify module code generation
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Enable compatibility with CommonJS modules
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Ensure consistent casing in imports
+    "resolveJsonModule": true, // Include modules imported with .json extension
+    "moduleResolution": "node", // Use Node.js module resolution
+    "jsx": "react", // Specify JSX code generation
+    "outDir": "./build", // Redirect output structure to the dist folder
+    "types": ["node", "jest", "@testing-library/jest-dom"], // Include type definitions for Node.js and Jes
+  },
+  "exclude": ["node_modules", "build"], // Exclude node_modules and dist folders
+  "plugins": [
+    {
+      "afterDeclarations": true
+    }
+  ]
+}
