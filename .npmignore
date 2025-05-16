@@ -1,0 +1,8 @@
+# Exclude everything by default
+*
+
+# Include the build folder
+!build/
+
+# Include the README file
+!README.md
