@@ -4,6 +4,7 @@ The `useDebounceFormik` hook enhances [Formik](https://formik.org/) forms by int
 
 ## Features
 
+- **Enhanced Formik Performance**: Decreases the frequency of rerenderings caused by state changes.
 - **Debounced Form Submission**: Prevents multiple rapid submissions by debouncing the submit handler.
 - **Centralized Debounce Configuration**: Easily configure debounce delay for all form fields in one place.
 - **Optimized for Debounced Inputs**: Works seamlessly with debounced components like `input` or `textarea`.
