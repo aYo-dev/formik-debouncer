@@ -1,6 +1,6 @@
 {
   "name": "@ayovchev/formik-debouncer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A React hook for integrating debounce functionality into formik form.",
   "keywords": [
     "react",
