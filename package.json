@@ -1,6 +1,6 @@
 {
   "name": "@ayovchev/formik-debouncer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A React hook for integrating debounce functionality into formik form.",
   "keywords": [
     "react",
@@ -27,6 +27,7 @@
     "build:cjs": "npx tsc --project tsconfig.cjs.json",
     "build:esm": "npx tsc --project tsconfig.esm.json",
     "build": "npm run build:cjs && npm run build:esm",
+    "prepublishOnly": "yarn build",
     "test": "npx jest --watchAll"
   },
   "repository": {
