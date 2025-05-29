@@ -62,6 +62,10 @@ const MyForm = () => {
 };
 ```
 
+### Demo
+
+Check out the live demo on [StackBlitz](https://stackblitz.com/edit/vitejs-vite-7ujwcekl?file=src%2FApp.tsx)
+
 ## API
 
 ### `useDebounceFormik`
