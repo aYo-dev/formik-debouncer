@@ -79,7 +79,7 @@ const MyForm = () => {
 - `onSubmit: (data: T, helpers: FormikHelpers<T>) => void`  
   A debounced submit handler to be passed to Formik's `onSubmit`.
 
-- `fieldProps: { debounce: boolean; debounceDelay: number }`  
+- `fieldProps: { debounce: boolean; delay: number }`  
   Props to be spread onto form fields that support debouncing.
 
 ### `LazyField` Props
