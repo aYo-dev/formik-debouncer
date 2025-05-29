@@ -35,6 +35,6 @@ export const useDebounceFormik = <T,>(
 
   return {
     onSubmit: submitCb,
-    fieldProps: { debounce: true, debounceDelay: delay ?? 500 },
+    fieldProps: { debounce: true, delay: delay ?? 500 },
   };
 };

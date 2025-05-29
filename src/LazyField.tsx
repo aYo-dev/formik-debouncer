@@ -2,7 +2,7 @@ import { useDebounceCallback } from "@ayovchev/react-debounce-callback-hook";
 import { FieldAttributes, useField } from "formik";
 import React from "react";
 
-export const LazyField = <T,>({ label, Component, ...props }: FieldAttributes<T>) => {
+export const LazyField = <T,>({ Component, ...props }: FieldAttributes<T>) => {
   const [field, meta] = useField(props);
   const [value, setValue] = React.useState(props.value ?? '');
 
@@ -22,14 +22,6 @@ export const LazyField = <T,>({ label, Component, ...props }: FieldAttributes<T>
   }
 
   return (
-    <>
-      <label>
-        {label}
-        <Component {...field} {...props} onChange={hadleChange} value={value} />
-      </label>
-      {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
-      ) : null}
-    </>
+      <Component {...meta} {...field} {...props} onChange={hadleChange} value={value} />
   );
 };

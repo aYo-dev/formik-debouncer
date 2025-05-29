@@ -62,6 +62,10 @@ const MyForm = () => {
 };
 ```
 
+### Demo
+
+Check out the live demo on [StackBlitz](https://stackblitz.com/edit/vitejs-vite-7ujwcekl?file=src%2FApp.tsx)
+
 ## API
 
 ### `useDebounceFormik`
@@ -79,7 +83,7 @@ const MyForm = () => {
 - `onSubmit: (data: T, helpers: FormikHelpers<T>) => void`  
   A debounced submit handler to be passed to Formik's `onSubmit`.
 
-- `fieldProps: { debounce: boolean; debounceDelay: number }`  
+- `fieldProps: { debounce: boolean; delay: number }`  
   Props to be spread onto form fields that support debouncing.
 
 ### `LazyField` Props
