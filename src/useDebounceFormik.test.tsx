@@ -29,7 +29,7 @@ describe('useDebounceFormik', () => {
 
     // Act: Call the submit callback with mocked Formik helpers
     await act(async () => {
-      await result.current.onSubmit({ someData: 'test' }, {
+      result.current.onSubmit({ someData: 'test' }, {
         validateForm: mockValidateForm,
         setSubmitting: mockSetSubmitting,
       } as unknown as FormikHelpers<Record<string, string>>);
@@ -55,7 +55,7 @@ describe('useDebounceFormik', () => {
 
     // Act: Call the submit callback
     await act(async () => {
-      await result.current.onSubmit({ someData: 'test' }, {
+      result.current.onSubmit({ someData: 'test' }, {
         validateForm: mockValidateForm,
         setSubmitting: mockSetSubmitting,
       } as unknown as FormikHelpers<Record<string, string>>);
@@ -76,11 +76,11 @@ describe('useDebounceFormik', () => {
 
     // Act: Call the submit callback multiple times quickly
     await act(async () => {
-      await result.current.onSubmit({ someData: 'test' }, {
+      result.current.onSubmit({ someData: 'test' }, {
         validateForm: mockValidateForm,
         setSubmitting: mockSetSubmitting,
       } as unknown as FormikHelpers<Record<string, string>>);
-      await result.current.onSubmit({ someData: 'test' }, {
+      result.current.onSubmit({ someData: 'test' }, {
         validateForm: mockValidateForm,
         setSubmitting: mockSetSubmitting,
       } as unknown as FormikHelpers<Record<string, string>>);
@@ -101,7 +101,7 @@ describe('useDebounceFormik', () => {
       () => useDebounceFormik(mockSubmit), // No delay passed
     );
 
-    expect(result.current.fieldProps.debounceDelay).toBe(500);
+    expect(result.current.fieldProps.delay).toBe(500);
   });
 
   it('should use custom debounce delay if provided', () => {
@@ -109,6 +109,6 @@ describe('useDebounceFormik', () => {
       () => useDebounceFormik(mockSubmit, 1000), // Custom delay passed
     );
 
-    expect(result.current.fieldProps.debounceDelay).toBe(1000);
+    expect(result.current.fieldProps.delay).toBe(1000);
   });
 });
