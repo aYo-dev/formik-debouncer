@@ -16,12 +16,12 @@ export const LazyField = <T,>({ Component, ...props }: FieldAttributes<T>) => {
     props.onChange(value);
   }, props.delay ?? 500);
 
-  const hadleChange = (e: any) => {
+  const handleChange = (e: any) => {
     setValue(e.target.value);
     onChange(e.target.value);
   }
 
   return (
-      <Component {...meta} {...field} {...props} onChange={hadleChange} value={value} />
+      <Component {...meta} {...field} {...props} onChange={handleChange} value={value} />
   );
 };

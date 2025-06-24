@@ -22,7 +22,7 @@ export const useDebounceFormik = <T,>(
     (data: T, helpers: FormikHelpers<T>) => {
       // first we need to validate the form
       helpers.validateForm().then((errors) => {
-        // check for errors and if there is no errors then submit the data
+        // check for errors and if there are no errors then submit the data
         if (Object.keys(errors).length === 0) {
           submit(data, helpers);
         }
